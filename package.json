@@ -43,7 +43,6 @@
         "@bochilteam/scraper": "^4.2.4",
         "@distube/ytdl-core": "^4.13.3",
         "@vitalets/google-translate-api": "^9.2.0",
-        "@whiskeysockets/baileys": "npm:@whiskeysockets/baileys@latest",
         "acrcloud": "^1.4.0",
         "api-dylux": "^1.7.2",
         "awesome-phonenumber": "^5.10.0",

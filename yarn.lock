@@ -1903,42 +1903,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@whiskeysockets/baileys@npm:@whiskeysockets/baileys@latest":
-  version: 6.6.0
-  resolution: "@whiskeysockets/baileys@npm:6.6.0"
-  dependencies:
-    "@adiwajshing/keyed-db": "npm:^0.2.4"
-    "@hapi/boom": "npm:^9.1.3"
-    audio-decode: "npm:^2.1.3"
-    axios: "npm:^1.3.3"
-    cache-manager: "npm:4.0.1"
-    futoin-hkdf: "npm:^1.5.1"
-    libphonenumber-js: "npm:^1.10.20"
-    libsignal: "github:adiwajshing/libsignal-node"
-    music-metadata: "npm:^7.12.3"
-    node-cache: "npm:^5.1.2"
-    pino: "npm:^7.0.0"
-    protobufjs: "npm:^7.2.4"
-    uuid: "npm:^9.0.0"
-    ws: "npm:^8.13.0"
-  peerDependencies:
-    jimp: ^0.16.1
-    link-preview-js: ^3.0.0
-    qrcode-terminal: ^0.12.0
-    sharp: ^0.32.2
-  peerDependenciesMeta:
-    jimp:
-      optional: true
-    link-preview-js:
-      optional: true
-    qrcode-terminal:
-      optional: true
-    sharp:
-      optional: true
-  checksum: 10c0/f0cec5b836972bb2892cd280df5842a0488e0d48b115b10e7633cbaabef0b8e4e52be418bfcaccc7acb8171ded91a04c9de4b34b8fed0cc53b2841fdc2c95b21
-  languageName: node
-  linkType: hard
-
 "@xmldom/xmldom@npm:^0.8.8":
   version: 0.8.10
   resolution: "@xmldom/xmldom@npm:0.8.10"
@@ -1954,7 +1918,6 @@ __metadata:
     "@bochilteam/scraper": "npm:^4.2.4"
     "@distube/ytdl-core": "npm:^4.13.3"
     "@vitalets/google-translate-api": "npm:^9.2.0"
-    "@whiskeysockets/baileys": "npm:@whiskeysockets/baileys@latest"
     acrcloud: "npm:^1.4.0"
     api-dylux: "npm:^1.7.2"
     awesome-phonenumber: "npm:^5.10.0"
