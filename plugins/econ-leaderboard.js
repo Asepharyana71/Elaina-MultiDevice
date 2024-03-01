@@ -1,11 +1,14 @@
-import { areJidsSameUser } from '@whiskeysockets/baileys';
+import { areJidsSameUser } from '@adiwajshing/baileys';
 import { createHash } from 'crypto';
 import PhoneNumber from 'awesome-phonenumber';
 import { canLevelUp, xpRange } from '../lib/levelling.js';
 
 let handler = async (m, { conn, args, usedPrefix, participants }) => {
   let users = Object.entries(global.db.data.users).map(([key, value]) => {
-    return { ...value, jid: key };
+    let wallet = value.credit || 0;
+    let bankAmount = value.bank || 0;
+    let totalgold = wallet + bankAmount;
+    return { ...value, jid: key, totalgold };
   });
   let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
   let user = global.db.data.users[who];
@@ -19,54 +22,40 @@ let handler = async (m, { conn, args, usedPrefix, participants }) => {
   let prem = global.prems.includes(who.split('@')[0]);
   let sn = createHash('md5').update(who).digest('hex');
 
-  let totalgold;
-  totalgold = Object.entries(global.db.data.users).map(([key, value]) => {
-    const user = { ...value, jid: key };
-    user.tg = user.credit + user.bank;
-    return user.tg;
-  });
+  let sortedGold = users.map(toNumber('totalgold')).sort(sort('totalgold', false)); // Sort in descending order (highest gold first)
 
+  let usersGold = sortedGold.map(user => user.jid);
 
-  let sortedExp = users.map(toNumber('exp')).sort(sort('exp'));
-  let sortedLim = users.map(toNumber('credit')).sort(sort('credit'));
-  let sortedLevel = users.map(toNumber('level')).sort(sort('level'));
-  let sortedBank = users.map(toNumber('bank')).sort(sort('bank'));
-  let sortedRank = users.map(toNumber('role')).sort(sort('role'));
-
-  let usersExp = sortedExp.map(user => user.jid);
-  let usersLim = sortedLim.map(user => user.jid);
-  let usersLevel = sortedLevel.map(user => user.jid);
-  let usersBank = sortedBank.map(user => user.jid);
-  let usersRank = sortedRank.map(user => user.jid);
-
-  let len = args[0] && args[0].length > 0 ? Math.min(50, Math.max(parseInt(args[0]), 5)) : Math.min(10, sortedExp.length);
+  let len = args[0] && args[0].length > 0 ? Math.min(50, Math.max(parseInt(args[0]), 5)) : Math.min(10, sortedGold.length);
   let text = `
-👑 *GLOBAL LEADERBOARD* 👑
+ *GLOBAL LEADERBOARD (GOLD)* 
 
-${sortedExp.slice(0, len).map(({ jid, exp, credit, level, bank, role }, i) => {
-  let totalgold = users.find(u => u.jid === jid).credit + users.find(u => u.jid === jid).bank;
-  let user = global.db.data.users[jid];
-  let username = user.name;
-  return `*#${i + 1}.*
-*👑 Username:* ${username}
-*🌟 Experience:* ${exp}
-*🏆 Rank:* ${role}
+${sortedGold.slice(0, len).map(({ jid, exp, level, credit, bank, role, totalgold }, i) => {
+    let wallet = credit || 0;
+    let bankAmount = bank || 0;
+    if (isNaN(totalgold) || isNaN(wallet) || isNaN(bankAmount)) return ''; // Exclude users with undefined gold, credit, or bank
+    let user = global.db.data.users[jid];
+    let username = user.name;
+    return `*#${i + 1}.*
+* Username:* ${username}
+* Experience:* ${exp}
+* Rank:* ${role}
 *✨ Level:* ${level}
-*👛 Wallet:* ${credit}
-*🏦 Bank:* ${bank}
-*💰 Gold:* ${totalgold}`;
-}).join('\n\n\n')}
-*You are at ${usersExp.indexOf(m.sender) + 1} out of total ${usersExp.length} members*`
-.trim();
-  
+* Wallet:* ${wallet}
+* Bank:* ${bankAmount}
+* Gold:* ${totalgold}`;
+  }).filter(Boolean).join('\n\n\n')}
+*You are at ${usersGold.indexOf(m.sender) + 1} out of total ${usersGold.length} members*`
+    .trim();
+
   conn.reply(m.chat, text, m, {
-    mentions: [...usersExp.slice(0, len), ...usersLevel.slice(0, len), ...usersLim.slice(0, len), ...usersBank.slice(0, len), ...usersRank.slice(0, len)].filter(v => !participants.some(p => areJidsSameUser(v, p.id)))
+    mentions: [...usersGold.slice(0, len)].filter(v => !participants.some(p => areJidsSameUser(v, p.id)))
   });
 };
 
-handler.help = ['leaderboard'];
+handler.help = ['leaderboardgold', 'lbgold'];
 handler.tags = ['core'];
-handler.command = ['leaderboard', 'lb'];
+handler.command = ['leaderboardgold', 'lbgold'];
 
 export default handler;
 
