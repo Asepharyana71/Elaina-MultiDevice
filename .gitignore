@@ -420,3 +420,4 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,git,linux,windows,python,executable,replit,ssh
 .vs
+/.vs/Elaina-MultiDevice/v17/.wsuo
