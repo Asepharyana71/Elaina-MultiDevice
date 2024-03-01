@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\asephs\\source\\repos\\Asepharyana71\\Elaina-MultiDevice\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asephs\\source\\repos\\Asepharyana71\\Elaina-MultiDevice\\handler.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:handler.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asephs\\source\\repos\\Asepharyana71\\Elaina-MultiDevice\\config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asephs\\source\\repos\\Asepharyana71\\Elaina-MultiDevice\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asephs\\source\\repos\\Asepharyana71\\Elaina-MultiDevice\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
@@ -23,15 +35,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "handler.js",
+              "DocumentMoniker": "C:\\Users\\asephs\\source\\repos\\Asepharyana71\\Elaina-MultiDevice\\handler.js",
+              "RelativeDocumentMoniker": "handler.js",
+              "ToolTip": "C:\\Users\\asephs\\source\\repos\\Asepharyana71\\Elaina-MultiDevice\\handler.js",
+              "RelativeToolTip": "handler.js",
+              "ViewState": "AQIAAAADAAAAAAAAAAAAAAUAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-03-01T16:52:38.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "config.js",
+              "DocumentMoniker": "C:\\Users\\asephs\\source\\repos\\Asepharyana71\\Elaina-MultiDevice\\config.js",
+              "RelativeDocumentMoniker": "config.js",
+              "ToolTip": "C:\\Users\\asephs\\source\\repos\\Asepharyana71\\Elaina-MultiDevice\\config.js",
+              "RelativeToolTip": "config.js",
+              "ViewState": "AQIAAPsAAAAAAAAAAAAAAAEBAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-03-01T14:50:50.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\asephs\\source\\repos\\Asepharyana71\\Elaina-MultiDevice\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\asephs\\source\\repos\\Asepharyana71\\Elaina-MultiDevice\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AQIAAJEBAAAAAAAAAADwv6UBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001407|",
+              "WhenOpened": "2024-03-01T14:41:05.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "main.js",
               "DocumentMoniker": "C:\\Users\\asephs\\source\\repos\\Asepharyana71\\Elaina-MultiDevice\\main.js",
               "RelativeDocumentMoniker": "main.js",
               "ToolTip": "C:\\Users\\asephs\\source\\repos\\Asepharyana71\\Elaina-MultiDevice\\main.js",
               "RelativeToolTip": "main.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAYAAAA",
+              "ViewState": "AQIAAJQBAAAAAAAAAAAYwIcBAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-03-01T14:35:06.419Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-01T14:35:06.419Z"
             }
           ]
         }
