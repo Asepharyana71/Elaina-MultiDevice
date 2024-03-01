@@ -203,7 +203,6 @@ export async function handler(chatUpdate) {
 					role: 'Free user',
 					autolevelup: false,
 					money: 0,
-					bank: 0,
 					atm: 0,
 					fullatm: 0,
 					health: 100,
@@ -249,7 +248,6 @@ export async function handler(chatUpdate) {
 					fishingrod: 0,
 					fishingroddurability: 0,
 
-					lastclaim: 0,
 					lastadventure: 0,
 					lastfishing: 0,
 					lastdungeon: 0,
