@@ -280,7 +280,7 @@ if (command == 'getvid', 'ytmp4', 'youtubemp4','ytv','youtubevideo') {
 };
 
 handler.tags = ['downloader']
-handler.command = ['play', 'ytplay', 'youtubeplay', 'ytlist', 'youtubelist', 'ytl', 'yta', 'ytmp3', 'getaud', 'youtubemp3', 'yts', 'youtubesearch', 'getvid', 'ytmp4', 'youtubemp4','ytv','youtubevideo']
+handler.command = ['ytplay', 'youtubeplay', 'ytlist', 'youtubelist', 'ytl', 'yta', 'ytmp3', 'getaud', 'youtubemp3', 'yts', 'youtubesearch', 'getvid', 'ytmp4', 'youtubemp4','ytv','youtubevideo']
 handler.limit = true // false
 
 export default handler;
