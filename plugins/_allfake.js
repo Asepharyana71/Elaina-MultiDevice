@@ -182,7 +182,7 @@ global.fakefb = {
 			{ fromMe: false,
 			participant: `0@s.whatsapp.net`, ...(m.chat ? 
 			{ remoteJid: "status@broadcast" } : {}) },
-			message: { "liveLocationMessage": { "title": "ImYanXiao","h": wm, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
+			message: { "liveLocationMessage": { "title": "Asepharyana71","h": wm, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
 		   }
 			   
 				   global.ftoko = {
