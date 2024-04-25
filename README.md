@@ -53,7 +53,7 @@ Install this tool first before running the script
 ## FOR VPS USER
 
 * apt update && apt upgrade -y
-* apt install nodejs imagemagick ffmpeg -y
+* apt install -y wget curl git ffmpeg imagemagick build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev dbus-x11 ffmpegfs ffmpegthumbnailer ffmpegthumbs libavcodec-dev libavcodec-extra libavdevice-dev libavfilter-dev libavfilter-extra libavformat-dev  libavifile-0.7-bin libavifile-0.7-common libavifile-0.7c2 libavutil-dev libpostproc-dev graphicsmagick graphicsmagick-dbg graphicsmagick-libmagick-dev-compat groff imagemagick-6.q16hdri imagemagick-common libchart-gnuplot-perl libgraphics-magick-perl libgraphicsmagick++-q16-12 libgraphicsmagick++1-dev
 * node -v 
 * if the version is still under 17, use this step
 * curl -s https://deb.nodesource.com/setup_19.x | sudo bash
