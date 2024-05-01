@@ -19,7 +19,7 @@ const delay = ms => isNumber(ms) && new Promise(resolve => setTimeout(function (
 
 /**
  * Handle messages upsert
- * @param {import('@adiwajshing/baileys').BaileysEventMap<unknown>['messages.upsert']} groupsUpdate 
+ * @param {import('@adiwajshing/baileys').BaileysEventMap<unknown>['messages.upsert']} groupsUpdate
  */
 
 export async function handler(chatUpdate) {
@@ -94,7 +94,7 @@ export async function handler(chatUpdate) {
                     chat.autoSticker = false
                 if (!('premium' in chat))
                     chat.premium = false
-                if (!('premiumTime' in chat)) 
+                if (!('premiumTime' in chat))
                     chat.premiumTime = false
                 if (!('premnsfw' in chat))
                     chat.premnsfw = false
@@ -117,7 +117,7 @@ export async function handler(chatUpdate) {
                     autoSticker: false,
                     premium: false,
 	            premiumTime: false,
-                    premnsfw: false, 
+                    premnsfw: false,
                 }
             let settings = global.db.data.settings[this.user.jid]
             if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
@@ -256,7 +256,7 @@ export async function handler(chatUpdate) {
                     plugin.command.test(command) :
                     Array.isArray(plugin.command) ? // Array?
                         plugin.command.some(cmd => cmd instanceof RegExp ? // RegExp in Array?
-                            cmd.test(command) :       
+                            cmd.test(command) :
                             cmd === command
                         ) :
                         typeof plugin.command === 'string' ? // String?
@@ -421,7 +421,7 @@ export async function handler(chatUpdate) {
                         lastSuccess: m.error != null ? 0 : now
                     }
                 stat.total += 1
-                stat.last = now                
+                stat.last = now
                 if (m.error == null) {
                     stat.success += 1
                     stat.lastSuccess = now
@@ -434,13 +434,14 @@ export async function handler(chatUpdate) {
             console.log(m, m.quoted, e)
         }
         if (opts['autoread'])
-            await conn.readMessages([m.key]) 
+            await conn.readMessages([m.key])
   }
 }
 /**
  * Handle groups participants update
- * @param {import('@adiwajshing/baileys').BaileysEventMap<unknown>['group-participants.update']} groupsUpdate 
+ * @param {import('@adiwajshing/baileys').BaileysEventMap<unknown>['group-participants.update']} groupsUpdate
  */
+/*
 export async function participantsUpdate({ id, participants, action }) {
     if (opts['self'])
         return
@@ -457,24 +458,24 @@ export async function participantsUpdate({ id, participants, action }) {
             if (chat.welcome) {
                 let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
                 for (let user of participants) {
-                	let nickgc = await conn.getName(id) 
+                	let nickgc = await conn.getName(id)
                     let pp = 'https://telegra.ph/file/24fa902ead26340f3df2c.png'
                     let ppgc = 'https://telegra.ph/file/24fa902ead26340f3df2c.png'
                     try {
                         pp = await this.profilePictureUrl(user, 'image')
-                        ppgc = await this.profilePictureUrl(id, 'image') 
+                        ppgc = await this.profilePictureUrl(id, 'image')
                     } catch (e) {
                     } finally {
                         text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'unknow') :
                             (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', `${this.getName(user)}`)
                             let wel = await new knights.Welcome2()
                  .setAvatar(pp)
-                 .setUsername(this.getName(user)) 
+                 .setUsername(this.getName(user))
                  .setBg("https://telegra.ph/file/0b814069d86ee9a022da5.jpg")
-                 .setGroupname(groupMetadata.subject) 
+                 .setGroupname(groupMetadata.subject)
                  .setMember(groupMetadata.participants.length)
                  .toAttachment()
-                 
+
               let lea = await new knights.Goodbye()
                 .setUsername(this.getName(user))
                 .setGuildName(groupMetadata.subject)
@@ -483,11 +484,11 @@ export async function participantsUpdate({ id, participants, action }) {
                 .setAvatar(pp)
                 .setBackground("https://telegra.ph/file/0db212539fe8a014017e3.jpg")
                 .toAttachment()
-                            
+
                          //this.sendFile(id, action === 'add' ? wel : lea, pp, 'pp.jpg', text, null, false, { mentions: [user] })
                        /*await this.sendHydrated(id, global.ucapan, text, action === 'add' ? wel.toBuffer() : lea.toBuffer(), sgc, (action == 'add' ? '💌 WELCOME' : '🐾 BYE'), user.split`@`[0], 'ɴᴜᴍʙᴇʀ ᴘᴀʀᴛɪᴄɪᴘᴀɴᴛ', [
-      [action == 'add' ? 'ᴡᴇʟᴄᴏᴍᴇ' : 'sᴀʏᴏɴᴀʀᴀᴀ', action === 'add' ? '.intro' : 'bilek']], null, fkontak, { mentions: [user] })*/
-                        
+      [action == 'add' ? 'ᴡᴇʟᴄᴏᴍᴇ' : 'sᴀʏᴏɴᴀʀᴀᴀ', action === 'add' ? '.intro' : 'bilek']], null, fkontak, { mentions: [user] })*/ /*
+
 		this.sendFile(id, action === 'add' ? wel.toBuffer() : lea.toBuffer(), 'pp.jpg', text, null, false, { mentionedJid: [user] })
                     }
                 }
@@ -504,11 +505,12 @@ export async function participantsUpdate({ id, participants, action }) {
             break
     }
 }
-
+*/
 /**
  * Handler groups update
- * @param {import('@adiwajshing/baileys').BaileysEventMap<unknown>['groups.update']} groupsUpdate 
+ * @param {import('@adiwajshing/baileys').BaileysEventMap<unknown>['groups.update']} groupsUpdate
  */
+/*
 export async function groupsUpdate(groupsUpdate) {
     if (opts['self'])
         return
@@ -526,10 +528,10 @@ export async function groupsUpdate(groupsUpdate) {
         if (groupUpdate.restrict == true) text = (chats.sRestrictOn || this.sRestrictOn || conn.sRestrictOn || '*Group has been all participants!*')
         if (groupUpdate.restrict == false) text = (chats.sRestrictOff || this.sRestrictOff || conn.sRestrictOff || '*Group has been only admin!*')
         if (!text) continue
-         this.reply(id, text.trim(), fakes) 
+         this.reply(id, text.trim(), fakes)
     }
 }
-
+*/
 export async function deleteUpdate(message) {
     try {
         const { fromMe, id, participant } = message
@@ -540,12 +542,12 @@ export async function deleteUpdate(message) {
             return
         let chat = global.db.data.chats[msg.chat] || {}
         if (chat.delete)
-            return 
+            return
             this.reply(msg.chat, `
-Terdeteksi @${participant.split`@`[0]} telah menghapus pesan. 
+Terdeteksi @${participant.split`@`[0]} telah menghapus pesan.
 Untuk mematikan fitur ini, ketik
 *.enable delete*
-          
+
 Untuk menghapus pesan yang dikirim oleh Bot, reply pesan dengan perintah
 *.delete*`, msg)
         this.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
@@ -564,7 +566,7 @@ global.dfail = (type, m, conn) => {
         private: '*ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ* • ᴄᴏᴍᴍᴀɴᴅ ɪɴɪ ʜᴀɴʏᴀ ʙɪsᴀ ᴅɪᴘᴀᴋᴀɪ ᴅɪᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ',
         admin: '*ᴏɴʟʏ ᴀᴅᴍɪɴ* • ᴄᴏᴍᴍᴀɴᴅ ɪɴɪ ʜᴀɴʏᴀ ᴜɴᴛᴜᴋ ᴀᴅᴍɪɴ ɢʀᴏᴜᴘ',
         botAdmin: '*ᴏɴʟʏ ʙᴏᴛ ᴀᴅᴍɪɴ* • ᴄᴏᴍᴍᴀɴᴅ ɪɴɪ ʜᴀɴʏᴀ ʙɪsᴀ ᴅɪɢᴜɴᴀᴋᴀɴ ᴋᴇᴛɪᴋᴀ ʙᴏᴛ ᴍᴇɴᴊᴀᴅɪ ᴀᴅᴍɪɴ',
-        unreg: '*ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ʀᴇɢɪsᴛᴇʀᴇᴅ ʏᴇᴛ* • ᴋᴇᴛɪᴋ  .daftar ᴜɴᴛᴜᴋ ʙɪsᴀ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ғɪᴛᴜʀ ɪɴɪ', 
+        unreg: '*ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ʀᴇɢɪsᴛᴇʀᴇᴅ ʏᴇᴛ* • ᴋᴇᴛɪᴋ  .daftar ᴜɴᴛᴜᴋ ʙɪsᴀ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ғɪᴛᴜʀ ɪɴɪ',
         restrict: '*ʀᴇsᴛʀɪᴄᴛ* • ʀᴇsᴛʀɪᴄᴛ ʙᴇʟᴜᴍ ᴅɪɴʏᴀʟᴀᴋᴀɴ ᴅɪᴄʜᴀᴛ ɪɴɪ',
     }[type]
     if (msg) return conn.reply(m.chat, msg, fakes)

@@ -1,5 +1,5 @@
-/* If You Copy, Don`t Delete This Credit!!! 
-  Don`t Sell This Script Or I Take Immediately 
+/* If You Copy, Don`t Delete This Credit!!!
+  Don`t Sell This Script Or I Take Immediately
   Yang Jual Script Ini Report/Hangusin Aja Akunnya Atau Pukulin ae orangnya
   Move To Pairing Code
   Buat Yg Nggk muncul Codenya Itu Disebabkan Oleh Banyaknya Plugins
@@ -37,9 +37,9 @@ import ws from 'ws'
 import {
     useMultiFileAuthState,
     DisconnectReason,
-    fetchLatestBaileysVersion, 
-    makeInMemoryStore, 
-    makeCacheableSignalKeyStore, 
+    fetchLatestBaileysVersion,
+    makeInMemoryStore,
+    makeCacheableSignalKeyStore,
     PHONENUMBER_MCC
     } from '@adiwajshing/baileys'
 import { Low, JSONFile } from 'lowdb'
@@ -120,24 +120,24 @@ const { version, isLatest} = await fetchLatestBaileysVersion()
 const { state, saveCreds } = await useMultiFileAuthState('./sessions')
 const connectionOptions = {
         version,
-        logger: pino({ level: 'silent' }), 
-        printQRInTerminal: !usePairingCode, 
+        logger: pino({ level: 'silent' }),
+        printQRInTerminal: !usePairingCode,
         browser: ['Mac OS', 'safari', '5.1.10'],
-        auth: { 
-         creds: state.creds, 
-         keys: makeCacheableSignalKeyStore(state.keys, pino().child({ 
-             level: 'silent', 
-             stream: 'store' 
-         })), 
+        auth: {
+         creds: state.creds,
+         keys: makeCacheableSignalKeyStore(state.keys, pino().child({
+             level: 'silent',
+             stream: 'store'
+         })),
      },
      getMessage: async key => {
     		const messageData = await store.loadMessage(key.remoteJid, key.id);
     		return messageData?.message || undefined;
 	},
-  generateHighQualityLinkPreview: true, 
+  generateHighQualityLinkPreview: true,
 	      patchMessageBeforeSending: (message) => {
                 const requiresPatch = !!(
-                    message.buttonsMessage 
+                    message.buttonsMessage
                     || message.templateMessage
                     || message.listMessage
                 );
@@ -156,7 +156,7 @@ const connectionOptions = {
                 }
 
                 return message;
-            }, 
+            },
 	connectTimeoutMs: 60000, defaultQueryTimeoutMs: 0, generateHighQualityLinkPreview: true, syncFullHistory: true, markOnlineOnConnect: true
 }
 
@@ -276,7 +276,7 @@ global.reloadHandler = async function (restatConn) {
         conn.ev.removeAllListeners()
         global.conn = makeWASocket(connectionOptions, { chats: oldChats })
         isInit = true
-    }    
+    }
   if (!isInit) {
     conn.ev.off('messages.upsert', conn.handler)
     conn.ev.off('group-participants.update', conn.participantsUpdate)
@@ -300,15 +300,15 @@ global.reloadHandler = async function (restatConn) {
   conn.sRestrictOff = 'Edit Info Grup di ubah ke semua peserta!'
 
   conn.handler = handler.handler.bind(global.conn)
-  conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
-  conn.groupsUpdate = handler.groupsUpdate.bind(global.conn)
+  //conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
+  //conn.groupsUpdate = handler.groupsUpdate.bind(global.conn)
   conn.onDelete = handler.deleteUpdate.bind(global.conn)
   conn.connectionUpdate = connectionUpdate.bind(global.conn)
   conn.credsUpdate = saveCreds.bind(global.conn)
 
   conn.ev.on('messages.upsert', conn.handler)
-  conn.ev.on('group-participants.update', conn.participantsUpdate)
-  conn.ev.on('groups.update', conn.groupsUpdate)
+  //conn.ev.on('group-participants.update', conn.participantsUpdate)
+  //conn.ev.on('groups.update', conn.groupsUpdate)
   conn.ev.on('message.delete', conn.onDelete)
   conn.ev.on('connection.update', conn.connectionUpdate)
   conn.ev.on('creds.update', conn.credsUpdate)

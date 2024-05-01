@@ -26,7 +26,7 @@ let wibh = moment.tz('Asia/Jakarta').format('HH')
     let wibm = moment.tz('Asia/Jakarta').format('mm')
     let wibs = moment.tz('Asia/Jakarta').format('ss')
     let wktuwib = `${wibh} H ${wibm} M ${wibs} S`
-    
+
     let d = new Date(new Date + 3600000)
     let locale = 'id'
     // d.getTimeZoneOffset()
@@ -40,53 +40,91 @@ let wibh = moment.tz('Asia/Jakarta').format('HH')
       month: 'long',
       year: 'numeric'
     })
-      
-    
+
+
 /*============== SOCIAL ==============*/
 
 // kalo ga punya biarin aja biar ada creditsnya :v
-global.sig = 'https://instagram.com/Xiao_yan_21' //Link Instagrammu
-global.sgh = 'https://github.com/ImYanXiao' //Link Githubmu
-global.sgc = 'https://chat.whatsapp.com/DyBMXDw1IshFM9z0ZHZNlR'
-global.sdc = '-' //Isi Pake Link Discordmu Kalo Gada Biarin aja
-global.snh = 'https://nhentai.net/' //Hmmm, Ini boleh kalian isi terserah :v
+global.sig = '-'
+global.sgh = 'https://github.com/Asepharyana71'
+global.sgc = 'https://whatsapp.com/channel/0029VaLlW39GU3BFtu4qq82y'
+global.sgw = 'https://www.instagram.com/asepharyana18'
+global.sdc = 'https://discord.com/invite/RUyrG5NB'
 
 /*============== PAYMENT ==============*/
-global.pdana = '085736178354' //Nomor Danamu
-global.ppulsa = '085736178354' //Nomor SimCard Yang Kamu Pake
-global.psaweria = 'https://saweria.com/XiaoYan021' //Link Saweriamu Kalo Nggada Ketik - aja
+global.pdana = '085224954965'
+global.povo = '085224954965'
+global.pgopay = '-'
+global.ppulsa = '085224954965'
+global.psaweria = '-'
 
 /*============== NOMOR ==============*/
-global.nomorbot = '6281231079387' //Nomor Bot
-global.nomorown = '6285736178354' //Nomor Owner
-global.namebot = 'Elaina BOT' //Nama Bot
-global.nameown = '𝓧𝓲𝓪𝓸 - 𝓨𝓪𝓷' // Nama Owner
-
+global.nameown = 'MythEclipse' // Nama Owner
+global.owner = [['6285224954965', 'Asepharyana', true]]
+global.mods = []
+global.prems = []
+global.nomorbot = '6285224954965'
+global.nomorown = '6285224954965'
 
 /*============== STAFF ==============*/
-global.owner = [
-  ['6285736178354', '❦ 𝚇 𝚒 𝚊 𝚘 - 𝚈𝚊𝚗? 🎐', true] //Ganti jd nomormu sama Namamu
-  // [number, dia creator/owner?, dia developer?]
-] // Put your number here
-global.mods = [] // Want some help?
-global.prems = [] // Premium user bukan disini nambahinnya, ketik .addprem @user 10
 
 
-global.lolkey = 'apikeymu'
-global.xkey = 'APIKEYMU'
-/*============== API ==============*/
-// Tambahin Rest Apinya Sendiri Krn yg saya hapus apinya sudah Mati
-global.APIs = { // API Prefix
-  // name: 'https://website'
-  nrtm: 'https://nurutomo.herokuapp.com',
-  lol: 'https://api.lolhuman.xyz'
-}
-global.APIKeys = { // APIKey Here
-  // 'https://website': 'apikey'
-  'https://api.lolhuman.xyz': 'Apikeymu'
-}
-// Kata APIKEY itu isi dengan apikeymu, dengan beli ke website itu
-
+global.APIs = {
+    // name: 'https://website'
+    xzn : 'https://skizo.tech/',
+    ryzen : 'https://api.ryzendesu.vip/',
+    nrtm: 'https://nurutomo.herokuapp.com',
+    rey: 'https://server-api-rey.herokuapp.com',
+    xteam: 'https://api.xteam.xyz',
+    zahir: 'https://zahirr-web.herokuapp.com',
+    lol: 'https://api.lolhuman.xyz',
+    dhnjing: 'https://dhnjing.xyz',
+    neoxr: 'https://neoxr-api.herokuapp.com',
+    zeks: 'https://api.zeks.me',
+    pencarikode: 'https://pencarikode.xyz',
+    ana: 'https://anabotofc.herokuapp.com/',
+    amel: 'https://melcanz.com',
+    hardianto: 'https://hardianto.xyz',
+    botstyle: 'https://botstyle-api.herokuapp.com',
+    adiisus: 'https://adiixyzapi.herokuapp.com',
+    kanx: 'https://kannxapi.herokuapp.com/',
+    violetics : 'https://violetics.pw',
+    ziy : 'https://ziy.herokuapp.com',
+    males : 'https://malesin.xyz',
+    rose: 'https://api.itsrose.site',
+    popcat : 'https://api.popcat.xyz'
+  }
+  global.APIKeys = { // APIKey Here
+    // 'https://website': 'apikey'
+    'https://skizo.tech/' : 'npnpicyy',
+    'https://api.ryzendesu.vip/': '84295850',
+    'https://api.xteam.xyz': 'ebb6251cc00f9c63',
+    'https://anabotofc.herokuapp.com/': 'AnaBot',
+    'https://api.lolhuman.xyz': 'e4ea69cba864dfa7d4968fdb',
+    'https://zahirr-web.herokuapp.com': 'zahirgans',
+    'https://api.zeks.me': 'apivinz',
+    'https://pencarikode.xyz': 'pais',
+    'https://melcanz.com': 'melcantik',
+    'https://neoxr-api.herokuapp.com': 'yntkts',
+    'https://server-api-rey.herokuapp.com': 'apirey',
+    'https://botstyle-api.herokuapp.com': 'Apikeymu',
+    'https://hardianto.xyz': 'hardianto',
+    'https://violetics.pw': 'beta',
+    'https://api.itsrose.site': 'apikeylu',
+    'https://ziy.herokuapp.com' : 'xZiyy'
+  }
+  global.apikey = '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'
+  global.openai = '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'
+  global.org = 'org-xX3KCL8IKKxLhTJ1PBDhjoXu'
+  global.btc = 'tMNbXw3t' // By YusupKakuu
+  global.xzn = 'npnpicyy' // By YusupKakuu
+  global.ryzen = '84295850' // daftar di api.ryzendesu.vip/
+  global.lol = 'e4ea69cba864dfa7d4968fdb' // SGWN
+  global.lolkey = 'e4ea69cba864dfa7d4968fdb'
+  global.rose = 'Rs-putangina' // Free
+  global.caliph = 'Lwlct6wi'
+  global.zenzkey = 'b8040941f7'
+  // Kata APIKEY itu isi dengan apikeymu, dengan beli ke website itu
 /*============== WATERMARK ==============*/
 global.wm = '                「 ᴇʟᴀɪɴᴀ 𝙱𝙾𝚃 汉  」' //Main Watermark
 global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘ᴇʟᴀɪɴᴀ - ᴄʜᴀɴ˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
@@ -95,7 +133,9 @@ global.namedoc = 'Elaina`s Bot' //Main Name Menu Document
 global.botdate = `⫹⫺ Day's: ${week} ${date}`
 global.bottime = `ᴛɪᴍᴇ: ${wktuwib}`
 global.titlebot = '🎋 ┊ sɪᴍᴘʟᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ'
-global.author = global.wm
+global.author = 'MythEclipse'
+global.namebot = 'MythEclipse'
+
 
 
 /*============== LOGO ==============*/
@@ -307,19 +347,19 @@ global.hwaifu = ['https://i.pinimg.com/originals/ed/34/f8/ed34f88af161e6278993e1
 
 /*============== FlamingText ===========*/
 global.flaaa = [
-'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text=', 
+'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text=',
 'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=',
 'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=crafts-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&text=',
 'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=amped-logo&doScale=true&scaleWidth=800&scaleHeight=500&text=',
 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text=',
-'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text='] 
+'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text=']
 
 /*============== TEXT ==============*/
 global.wait = '```「▰▰▰▱▱▱▱▱▱▱」Loading...```'
 global.eror = '```404 error```'
 global.dtu = 'ɪɴꜱᴛᴀɢʀᴀᴍ'
 global.dtc = 'ᴄᴀʟʟ ᴏᴡɴᴇʀ'
-global.phn = '+62 857-3617-8354'
+global.phn = '+62 852-2495-4965'
 
 /*=========== TYPE DOCUMENT ===========*/
 global.dpptx = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
@@ -402,7 +442,7 @@ global.rpg = {
       gold: '🪙',
       emerald: '❇️',
       upgrader: '🧰'
-      
+
     }
     let results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
     if (!results.length) return ''
