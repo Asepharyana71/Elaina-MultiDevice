@@ -1,6 +1,6 @@
 const handler = async (m, { conn, isOwner }) => {
 	let groups = Object.values(await conn.groupFetchAllParticipating())
-	
+
 	let str = Object.keys(groups).map((i, index) => {
         return `*${dmenut}* ${1 + index}
 *${dmenub} Name :* ${groups[i].subject}

@@ -1,25 +1,26 @@
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
-    let teks = `
+    let donasi = `
 ︵‿︵‿︵‿︵ *DONASI BOT* ︵‿︵‿︵‿︵
 ┌─「 Donasi • Pulsa 」
-│ • *Indosat:* [${global.ppulsa}]
+│ • *Telkomsel:* ${global.ppulsa}
 ❏────
 
 ┌─「 Donasi • Non Pulsa 」
-│ • *Dana:* [${global.pdana}]
-│ • *Saweria:* [${global.psaweria}]
+│ • *Dana:* ${global.pdana}
+│ • *Saweria:* ${global.psaweria}
 ❏────
 
 *ʙᴀᴄᴋ ᴛᴏ ᴀʟʟ ᴍᴇɴᴜ*: .?
 *ᴘɪɴɢ*: .ping
 *ᴄʀᴇᴀᴛᴏʀ*: .creator
 ︵‿︵‿︵‿︵︵‿︵‿︵‿︵︵‿︵‿︵‿
-Created by ${global.namebot} 
-`
+Created by ${global.namebot}
+`;
 
-    let you = flaaa.getRandom()
+    let you = flaaa.getRandom();
 
-    await conn.sendFile(m.chat, you + 'Donasi', 'donasi.jpg', m); 
+    await conn.reply(m.quoted ? m.quoted : m.chat, donasi, m); // Reply with donation information
+
 };
 
 handler.help = ['donasi'];
